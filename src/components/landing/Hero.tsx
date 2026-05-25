@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/hero-ai.jpg";
 
 export function Hero() {
   return (
@@ -54,13 +53,14 @@ export function Hero() {
           className="relative max-w-5xl mx-auto"
         >
           <div className="glass rounded-3xl p-2 shadow-elegant">
-            <img
-              src={heroImg}
-              alt="ATHA AI Study Hub dashboard"
-              width={1920}
-              height={1080}
-              className="rounded-2xl w-full"
-            />
+            <div className="rounded-2xl w-full h-96 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+              <div className="text-center">
+                <div className="h-16 w-16 rounded-2xl bg-gradient-primary mx-auto mb-4 grid place-items-center shadow-glow">
+                  <Sparkles className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <p className="text-muted-foreground">Dashboard Preview</p>
+              </div>
+            </div>
           </div>
           <div className="absolute -inset-4 bg-gradient-primary opacity-20 blur-3xl -z-10 rounded-full" />
         </motion.div>
